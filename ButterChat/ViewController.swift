@@ -22,12 +22,21 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var someButton: UIButton!
     @IBAction func someButtonPressed(_ sender: Any) {
-        
+        sendRequest()
     }
     
     func sendRequest() {
-        
+        let url = URL(string: "http://127.0.0.1:8000")
+        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+            
+            guard let data = data else {
+                print("No data")
+                return
+            }
+            let response = String(data: data, encoding: .utf8) ?? ""
+            print(response)
+        }
+        task.resume()
     }
-
 }
 
