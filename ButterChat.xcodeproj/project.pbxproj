@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5CBEFFC1E3310D90077D9B4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */; };
 		B5D21A401E32FA75007656C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D21A3F1E32FA75007656C7 /* AppDelegate.swift */; };
 		B5D21A421E32FA75007656C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D21A411E32FA75007656C7 /* ViewController.swift */; };
 		B5D21A451E32FA75007656C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D21A431E32FA75007656C7 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		B5D21A3C1E32FA75007656C7 /* ButterChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D21A3F1E32FA75007656C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5D21A411E32FA75007656C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				B5D21A461E32FA75007656C7 /* Assets.xcassets */,
 				B5D21A481E32FA75007656C7 /* LaunchScreen.storyboard */,
 				B5D21A4B1E32FA75007656C7 /* Info.plist */,
+				B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */,
 			);
 			path = ButterChat;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5D21A421E32FA75007656C7 /* ViewController.swift in Sources */,
+				B5CBEFFC1E3310D90077D9B4 /* NetworkHelper.swift in Sources */,
 				B5D21A401E32FA75007656C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +306,7 @@
 				B5D21A501E32FA75007656C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
