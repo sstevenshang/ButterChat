@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B246438CB6BB7905928BD8C /* Pods_ButterChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13FD4A219B336874F4D2786 /* Pods_ButterChat.framework */; };
+		B55E6ED11E33E24B0053A538 /* ChatroomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55E6ED01E33E24B0053A538 /* ChatroomTableViewCell.swift */; };
 		B5CBEFFC1E3310D90077D9B4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */; };
 		B5D21A401E32FA75007656C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D21A3F1E32FA75007656C7 /* AppDelegate.swift */; };
 		B5D21A421E32FA75007656C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D21A411E32FA75007656C7 /* ViewController.swift */; };
 		B5D21A451E32FA75007656C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D21A431E32FA75007656C7 /* Main.storyboard */; };
 		B5D21A471E32FA75007656C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5D21A461E32FA75007656C7 /* Assets.xcassets */; };
 		B5D21A4A1E32FA75007656C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D21A481E32FA75007656C7 /* LaunchScreen.storyboard */; };
+		B5E499A01E33CF9D009C6BBD /* Chatroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E4999F1E33CF9D009C6BBD /* Chatroom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3AF08E849A2DEFB04E8991 /* Pods-ButterChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ButterChat/Pods-ButterChat.debug.xcconfig"; sourceTree = "<group>"; };
+		B55E6ED01E33E24B0053A538 /* ChatroomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatroomTableViewCell.swift; sourceTree = "<group>"; };
 		B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		B5D21A3C1E32FA75007656C7 /* ButterChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D21A3F1E32FA75007656C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		B5D21A461E32FA75007656C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5D21A491E32FA75007656C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5D21A4B1E32FA75007656C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E4999F1E33CF9D009C6BBD /* Chatroom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chatroom.swift; sourceTree = "<group>"; };
+		C99CE665807D2421911F5B9A /* Pods-ButterChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-ButterChat/Pods-ButterChat.release.xcconfig"; sourceTree = "<group>"; };
+		E13FD4A219B336874F4D2786 /* Pods_ButterChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ButterChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B246438CB6BB7905928BD8C /* Pods_ButterChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8641B2B3DC4B6F5220090303 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A3AF08E849A2DEFB04E8991 /* Pods-ButterChat.debug.xcconfig */,
+				C99CE665807D2421911F5B9A /* Pods-ButterChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B5D21A331E32FA75007656C7 = {
 			isa = PBXGroup;
 			children = (
 				B5D21A3E1E32FA75007656C7 /* ButterChat */,
 				B5D21A3D1E32FA75007656C7 /* Products */,
+				8641B2B3DC4B6F5220090303 /* Pods */,
+				D582E89BDF29E8C114DE0565 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +83,18 @@
 				B5D21A481E32FA75007656C7 /* LaunchScreen.storyboard */,
 				B5D21A4B1E32FA75007656C7 /* Info.plist */,
 				B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */,
+				B5E4999F1E33CF9D009C6BBD /* Chatroom.swift */,
+				B55E6ED01E33E24B0053A538 /* ChatroomTableViewCell.swift */,
 			);
 			path = ButterChat;
+			sourceTree = "<group>";
+		};
+		D582E89BDF29E8C114DE0565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E13FD4A219B336874F4D2786 /* Pods_ButterChat.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5D21A4E1E32FA75007656C7 /* Build configuration list for PBXNativeTarget "ButterChat" */;
 			buildPhases = (
+				9682FFFF4780AC7494827B04 /* [CP] Check Pods Manifest.lock */,
 				B5D21A381E32FA75007656C7 /* Sources */,
 				B5D21A391E32FA75007656C7 /* Frameworks */,
 				B5D21A3A1E32FA75007656C7 /* Resources */,
+				31B77CA43C7EE13AB1A1CE72 /* [CP] Embed Pods Frameworks */,
+				01F5B3F3678225E722C359B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,13 +168,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01F5B3F3678225E722C359B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ButterChat/Pods-ButterChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31B77CA43C7EE13AB1A1CE72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ButterChat/Pods-ButterChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9682FFFF4780AC7494827B04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B5D21A381E32FA75007656C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B5D21A421E32FA75007656C7 /* ViewController.swift in Sources */,
+				B55E6ED11E33E24B0053A538 /* ChatroomTableViewCell.swift in Sources */,
 				B5CBEFFC1E3310D90077D9B4 /* NetworkHelper.swift in Sources */,
+				B5E499A01E33CF9D009C6BBD /* Chatroom.swift in Sources */,
 				B5D21A401E32FA75007656C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +346,9 @@
 		};
 		B5D21A4F1E32FA75007656C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A3AF08E849A2DEFB04E8991 /* Pods-ButterChat.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WK3VAH28UA;
 				INFOPLIST_FILE = ButterChat/Info.plist;
@@ -276,7 +361,9 @@
 		};
 		B5D21A501E32FA75007656C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C99CE665807D2421911F5B9A /* Pods-ButterChat.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WK3VAH28UA;
 				INFOPLIST_FILE = ButterChat/Info.plist;

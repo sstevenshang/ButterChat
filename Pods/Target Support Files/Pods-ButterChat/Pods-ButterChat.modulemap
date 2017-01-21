@@ -1,0 +1,6 @@
+framework module Pods_ButterChat {
+  umbrella header "Pods-ButterChat-umbrella.h"
+
+  export *
+  module * { export * }
+}
