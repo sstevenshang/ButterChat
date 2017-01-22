@@ -21,7 +21,7 @@ class ChatViewController: BaseChatViewController {
         
         // Do any additional setup after loading the view.
         
-        //self.chatDataSource = MessageDataSource()
+        self.chatDataSource = DataSource()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,18 +66,26 @@ class ChatViewController: BaseChatViewController {
         return item
     }
     
+    // MARK: PResenter
     
-    public typealias ChatItemType = String
-    
-    public override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
-        return [ChatItemType: [ChatItemPresenterBuilderProtocol]]()
+    override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
+        
+        let textMessagePresenter = TextMessagePresenterBuilder(viewModelBuilder: ViewModelBuilderProtocol)
+        let photoMessagePresenter = TextMessagePresenterBuilder(viewModelBuilder: ViewModelBuilderProtocol)
+        return [
+            "text-message-type": [textMessagePresenter],
+            "photo-message-type": [photoMessagePresenter],
+        ]
+        
     }
     
-//    public protocol ChatItemPresenterBuilderProtocol {
-//        func canHandleChatItem(chatItem: ChatItemProtocol) -> Bool
-//        func createPresenterWithChatItem(chatItem: ChatItemProtocol) -> ChatItemPresenterProtocol
-//        var presenterType: ChatItemPresenterProtocol.Type { get }
-//    }
+    
+    
+    
+    
+    
+    
+    
     
 }
 

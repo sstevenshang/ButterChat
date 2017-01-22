@@ -10,5 +10,5 @@ target 'ButterChat' do
   pod 'Chatto', '= 3.0.1'
   pod 'ChattoAdditions', '= 3.0.1'
   pod 'SwiftSocket'
-
+  pod 'NMessenger'
 end
