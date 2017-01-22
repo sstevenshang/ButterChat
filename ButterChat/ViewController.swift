@@ -13,8 +13,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var user: User = User(username: "Steven", password: "password", language: ["English","en"])
-    let dropDown = DropDown()
+    var user: User!
+    
+    var dropDown: DropDown!
     
     var langDict: [String:String] = [
         "Arabic" : "ar",
@@ -45,17 +46,21 @@ class ViewController: UIViewController {
     var networkHelper: NetworkHelper = NetworkHelper()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         if chatrooms.count == 0 {
             tableView.isHidden = true
         }
-        tableView.rowHeight = 60
         
+        //tableView.rowHeight = 60
+        
+        dropDown = DropDown()
         dropDown.anchorView = self.tableView
         
         //dropDown.bottomOffset = CGPoint(x: 0, y: 60)
-
+        
         var langs: [String] = []
         for (key, _) in langDict {
             langs.append(key)
@@ -68,7 +73,9 @@ class ViewController: UIViewController {
                 print("LANG SETTING GONE WRONG!!")
                 return
             }
+            
             self.user.language = [item,langSelected]
+            print("language set to \(langSelected)")
         }
     }
 
@@ -114,11 +121,11 @@ class ViewController: UIViewController {
     
     func iconRandomizer() -> UIImage {
         
-        var rand = Int(arc4random_uniform(3))
+        var rand = Int(arc4random_uniform(8))
         print(rand)
         if lastIconUsed != nil {
             if rand == lastIconUsed {
-                rand = (rand + 1)%3
+                rand = (rand + 1)%8
             }
         }
         lastIconUsed = rand
@@ -129,14 +136,24 @@ class ViewController: UIViewController {
         
         switch i {
         case 0:
-            return UIImage(named: "banana")!
+            return UIImage(named: "desert")!
         case 1:
-            return UIImage(named: "lemon")!
+            return UIImage(named: "cityscape")!
         case 2:
-            return UIImage(named: "grape")!
+            return UIImage(named: "forest")!
+        case 3:
+            return UIImage(named: "mill")!
+        case 4:
+            return UIImage(named: "mountains")!
+        case 5:
+            return UIImage(named: "village")!
+        case 6:
+            return UIImage(named: "beach")!
+        case 7:
+            return UIImage(named: "spruce")!
         default:
             print("an error has occured setting icon")
-            return UIImage()
+            return UIImage(named: "cityscape")!
         }
     }
     
