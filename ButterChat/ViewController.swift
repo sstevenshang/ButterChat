@@ -74,7 +74,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            self.user.language = [item,langSelected]
+            LoginViewViewController.superUser.language = [item,langSelected]
             print("language set to \(langSelected)")
         }
     }
@@ -161,8 +161,9 @@ class ViewController: UIViewController {
         if segue.identifier == "showChatSegue" {
             
             let nextScene = segue.destination as? ChatViewController
-            nextScene?.title = chatrooms[(tableView.indexPathForSelectedRow?.row)!].name
-            nextScene?.user = user
+            nextScene!.title = chatrooms[(tableView.indexPathForSelectedRow?.row)!].name
+            print("USER\(user.username)")
+            nextScene!.user = user
         }
     }
     

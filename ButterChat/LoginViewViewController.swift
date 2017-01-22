@@ -55,6 +55,8 @@ class LoginViewViewController: UIViewController {
         
         performSegue(withIdentifier: "showChatrooms", sender: self)
     }
+    
+    static var superUser: User!
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -65,8 +67,8 @@ class LoginViewViewController: UIViewController {
             
             let nav = segue.destination as! UINavigationController
             let nextScene = nav.topViewController as! ViewController
-            let user = User(username: _username, password: _password, language: ["English","en"])
-            nextScene.user = user
+            LoginViewViewController.superUser = User(username: _username, password: _password, language: ["English","en"])
+            nextScene.user = LoginViewViewController.superUser
         }
     }
     
