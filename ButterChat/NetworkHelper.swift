@@ -85,7 +85,7 @@ class NetworkHelper {
         }
     }
     
-    func getMessage(langauge: String, handler: (Bool, [String]?) -> Void) {
+    func getMessage(langauge: String, handler: (Bool, [(String, String)]?) -> Void) {
         
         switch client.send(string: "-c \(langauge)") {
         case .success:
@@ -98,7 +98,12 @@ class NetworkHelper {
                 return
             }
             print(response)
-            // parse messages and call handler!
+            
+            let messages: [(String,String)]? = []
+            
+            // parse messages
+            
+            handler(true, messages)
             
         case .failure(let error):
             print(error)

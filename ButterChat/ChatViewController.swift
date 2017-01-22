@@ -13,19 +13,20 @@ class ChatViewController: NMessengerViewController {
 
     @IBOutlet weak var titleItem: UINavigationItem!
     
+    var timer = Timer()
+
     var user: User! = nil
     
     let network = NetworkHelper()
     
+    var messageCount: Int!
+    
     @IBOutlet weak var networkLabel: UILabel!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         connection()
-        
-        //self.addMessageToMessenger(sendText("Hello World", isIncomingMessage: true))
+        messageCount = 0
     }
     
     let SUCCESS_MESSAGE = "Hey Look, 😋! You're Connected with "
@@ -92,7 +93,33 @@ class ChatViewController: NMessengerViewController {
         return newMessage
     }
     
+    func listen() {
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(ChatViewController.pullFromServer), userInfo: nil, repeats: true)
+    }
     
+    func pullFromServer() {
+        DispatchQueue.global().async {
+            self.network.getMessage(langauge: self.user.language[1]) { (success, messages) in
+                if !success {
+                    print("failed to get messages")
+                    return
+                }
+                guard let messages = messages else {
+                    return
+                }
+                let balance = messages.count - self.messageCount
+                if (balance <= 0) {
+                    return
+                }
+                for index in 0...balance {
+                    let message = messages[index].1
+                    let usr = messages[index].0
+                    let okay = self.sendText(message, isIncomingMessage: (usr == self.user.username))
+                    print(okay)
+                }
+            }
+        }
+    }
 }
 
 
