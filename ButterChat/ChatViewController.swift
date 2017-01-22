@@ -19,7 +19,7 @@ class ChatViewController: NMessengerViewController {
     
     let network = NetworkHelper()
     
-    var messageCount: Int!
+    var messageCount: Int = 0
     
     @IBOutlet weak var networkLabel: UILabel!
     
@@ -50,6 +50,7 @@ class ChatViewController: NMessengerViewController {
             DispatchQueue.main.async {
                 self.networkLabel.text = text
                 self.view.addSubview(self.networkLabel)
+                self.listen()
             }
         }
     }
@@ -67,6 +68,7 @@ class ChatViewController: NMessengerViewController {
     
     override func sendText(_ text: String, isIncomingMessage: Bool) -> GeneralMessengerCell {
         
+        messageCount += 1
         networkLabel.isHidden = true
         sendToServer(text: text)
         print(text)
@@ -99,7 +101,9 @@ class ChatViewController: NMessengerViewController {
     
     func pullFromServer() {
         DispatchQueue.global().async {
+            
             self.network.getMessage(langauge: self.user.language[1]) { (success, messages) in
+                print(self.messageCount)
                 if !success {
                     print("failed to get messages")
                     return
@@ -121,10 +125,3 @@ class ChatViewController: NMessengerViewController {
         }
     }
 }
-
-
-
-
-
-
-
