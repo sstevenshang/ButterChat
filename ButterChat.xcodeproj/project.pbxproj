@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7B246438CB6BB7905928BD8C /* Pods_ButterChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13FD4A219B336874F4D2786 /* Pods_ButterChat.framework */; };
 		B55E6ED11E33E24B0053A538 /* ChatroomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55E6ED01E33E24B0053A538 /* ChatroomTableViewCell.swift */; };
+		B55E6ED51E3434210053A538 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55E6ED41E3434210053A538 /* ChatViewController.swift */; };
+		B55E6ED71E3436750053A538 /* MessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55E6ED61E3436750053A538 /* MessageDataSource.swift */; };
+		B55E6ED91E3438940053A538 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55E6ED81E3438940053A538 /* MessageItem.swift */; };
+		B5823F271E344FDD0032B10B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823F261E344FDD0032B10B /* User.swift */; };
 		B5CBEFFC1E3310D90077D9B4 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */; };
 		B5D21A401E32FA75007656C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D21A3F1E32FA75007656C7 /* AppDelegate.swift */; };
 		B5D21A421E32FA75007656C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D21A411E32FA75007656C7 /* ViewController.swift */; };
@@ -21,6 +25,10 @@
 /* Begin PBXFileReference section */
 		1A3AF08E849A2DEFB04E8991 /* Pods-ButterChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ButterChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ButterChat/Pods-ButterChat.debug.xcconfig"; sourceTree = "<group>"; };
 		B55E6ED01E33E24B0053A538 /* ChatroomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatroomTableViewCell.swift; sourceTree = "<group>"; };
+		B55E6ED41E3434210053A538 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		B55E6ED61E3436750053A538 /* MessageDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDataSource.swift; sourceTree = "<group>"; };
+		B55E6ED81E3438940053A538 /* MessageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
+		B5823F261E344FDD0032B10B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		B5D21A3C1E32FA75007656C7 /* ButterChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButterChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D21A3F1E32FA75007656C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +93,10 @@
 				B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */,
 				B5E4999F1E33CF9D009C6BBD /* Chatroom.swift */,
 				B55E6ED01E33E24B0053A538 /* ChatroomTableViewCell.swift */,
+				B55E6ED41E3434210053A538 /* ChatViewController.swift */,
+				B55E6ED61E3436750053A538 /* MessageDataSource.swift */,
+				B55E6ED81E3438940053A538 /* MessageItem.swift */,
+				B5823F261E344FDD0032B10B /* User.swift */,
 			);
 			path = ButterChat;
 			sourceTree = "<group>";
@@ -221,10 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B55E6ED91E3438940053A538 /* MessageItem.swift in Sources */,
 				B5D21A421E32FA75007656C7 /* ViewController.swift in Sources */,
 				B55E6ED11E33E24B0053A538 /* ChatroomTableViewCell.swift in Sources */,
 				B5CBEFFC1E3310D90077D9B4 /* NetworkHelper.swift in Sources */,
 				B5E499A01E33CF9D009C6BBD /* Chatroom.swift in Sources */,
+				B5823F271E344FDD0032B10B /* User.swift in Sources */,
+				B55E6ED51E3434210053A538 /* ChatViewController.swift in Sources */,
+				B55E6ED71E3436750053A538 /* MessageDataSource.swift in Sources */,
 				B5D21A401E32FA75007656C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

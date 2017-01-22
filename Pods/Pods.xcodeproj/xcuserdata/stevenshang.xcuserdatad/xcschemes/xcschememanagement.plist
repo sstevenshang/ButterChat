@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Chatto.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ChattoAdditions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ButterChat.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>31E064EBBD4203A96B844FEB06C11235</key>
+		<key>0564C2782D1F2F8E464CB332E0FE7246</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6251202B020E3C75D30973B63D27B02F</key>
+		<key>492D715C652D6BB61CF0FE7156922A4B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4DFA35514B7479B8325D283C35222C44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EB01FD994DC50DEA2AFC920AEC1093A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

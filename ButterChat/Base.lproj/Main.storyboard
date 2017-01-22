@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="agy-2X-LRq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oC6-eW-KeN">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Chatrooms" id="1Yh-kA-Qvi">
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eXf-UA-6ND">
@@ -35,14 +35,14 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6UW-DR-gvA">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatroom" rowHeight="60" id="fcq-MT-i8z" customClass="ChatroomTableViewCell" customModule="ButterChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fcq-MT-i8z" id="ytn-5T-y2S">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lemon" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-oi-8U4">
@@ -69,6 +69,7 @@
                                         <connections>
                                             <outlet property="iconImageView" destination="4lM-oi-8U4" id="DFI-RJ-xE1"/>
                                             <outlet property="nameLabel" destination="zBb-Rh-vJ3" id="u6h-Dh-wEA"/>
+                                            <segue destination="E8z-mV-8zI" kind="show" identifier="showChatSegue" id="Omj-di-M2e"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -89,6 +90,7 @@
                             <constraint firstItem="6UW-DR-gvA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ymA-9y-RnS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9AS-0g-imL"/>
                     <connections>
                         <outlet property="addButton" destination="eXf-UA-6ND" id="YTJ-57-DRj"/>
                         <outlet property="tableView" destination="6UW-DR-gvA" id="K61-EZ-urA"/>
@@ -96,12 +98,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="0gx-nd-Mlf">
             <objects>
-                <viewController id="E8z-mV-8zI" sceneMemberID="viewController">
+                <viewController id="E8z-mV-8zI" customClass="ChatViewController" customModule="ButterChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ee-5Q-dXo"/>
                         <viewControllerLayoutGuide type="bottom" id="srI-q3-l5l"/>
@@ -111,47 +113,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfJ-M2-QDb">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="ChatTitle" id="rYw-3q-CZd"/>
+                                    <navigationItem title="TITLE" id="rYw-3q-CZd" userLabel="Title"/>
                                 </items>
                             </navigationBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ytX-sn-jpP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wde-Mp-pfs">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8ix-xh-E60">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="srI-q3-l5l" firstAttribute="top" secondItem="ytX-sn-jpP" secondAttribute="bottom" id="KbM-b8-CKo"/>
                             <constraint firstItem="ZfJ-M2-QDb" firstAttribute="leading" secondItem="wE5-do-pT2" secondAttribute="leading" id="MLw-1l-5Al"/>
                             <constraint firstItem="ZfJ-M2-QDb" firstAttribute="top" secondItem="2Ee-5Q-dXo" secondAttribute="bottom" id="eIG-Ux-akf"/>
-                            <constraint firstItem="ytX-sn-jpP" firstAttribute="leading" secondItem="wE5-do-pT2" secondAttribute="leading" id="iPi-Ld-LyG"/>
-                            <constraint firstAttribute="trailing" secondItem="ytX-sn-jpP" secondAttribute="trailing" id="pXY-F4-Lq7"/>
-                            <constraint firstItem="ytX-sn-jpP" firstAttribute="top" secondItem="ZfJ-M2-QDb" secondAttribute="bottom" id="qDn-rj-R8l"/>
                             <constraint firstAttribute="trailing" secondItem="ZfJ-M2-QDb" secondAttribute="trailing" id="sVX-ZI-Pdv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleItem" destination="rYw-3q-CZd" id="I26-BE-cih"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bde-V3-Ksp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847" y="139"/>
+            <point key="canvasLocation" x="1784.8" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cMc-ER-vju">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="agy-2X-LRq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DT6-Gq-DBH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1pn-qp-t0r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6b-h7-EaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>

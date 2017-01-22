@@ -1,12 +1,19 @@
 PODS:
+  - Chatto (3.0.1)
+  - ChattoAdditions (3.0.1):
+    - Chatto
   - SwiftSocket (2.0.1)
 
 DEPENDENCIES:
+  - Chatto (= 3.0.1)
+  - ChattoAdditions (= 3.0.1)
   - SwiftSocket
 
 SPEC CHECKSUMS:
+  Chatto: 484273a793e06a33cef2f7e5b5b88a5a375df015
+  ChattoAdditions: efd743b47dbd063eac824cd4bd94756cbf503f70
   SwiftSocket: 2d814afdc97c89217982f86fd036c1874134a63f
 
-PODFILE CHECKSUM: e04cecbf33e9e6bde7b4342f395fa8965a6c299f
+PODFILE CHECKSUM: 7361598e72e7085d96d6a7dd8b5886e7f1950471
 
 COCOAPODS: 1.1.1

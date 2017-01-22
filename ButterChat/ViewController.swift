@@ -93,6 +93,14 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showChatSegue" {
+            
+            let nextScene = segue.destination as? ChatViewController
+            nextScene?.title = chatrooms[(tableView.indexPathForSelectedRow?.row)!].name
+        }
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -107,5 +115,5 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.iconImageView.image = chatrooms[indexPath.row].icon
         return cell
     }
-    
+
 }
