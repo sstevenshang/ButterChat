@@ -4,12 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AsyncDisplayKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Chatto.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>ChattoAdditions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NMessenger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PINCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PINRemoteImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,17 +52,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>492D715C652D6BB61CF0FE7156922A4B</key>
+		<key>133D0E48A931A73273A94351AB1C2BED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4DFA35514B7479B8325D283C35222C44</key>
+		<key>1879ED5E4D07889BD22CE9BC52F55342</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6EB01FD994DC50DEA2AFC920AEC1093A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A78E375C69458F502D3B0B1628FFB476</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A94D92F5FC8DB8BC1D7A1AA08B6EED98</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE160AD9EF644386AE272FDA59614AAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDE8929ABCB318C8B10D3E4E7BDFB8CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

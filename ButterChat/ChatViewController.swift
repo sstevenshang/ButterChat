@@ -9,6 +9,7 @@
 import UIKit
 import Chatto
 import ChattoAdditions
+import NMessenger
 
 class ChatViewController: BaseChatViewController {
 
@@ -16,12 +17,16 @@ class ChatViewController: BaseChatViewController {
     
     let chatName = ""
     
+    let messengerView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        self.messengerView = NMessenger(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
+        messengerView.delegate = self
+        self.view.addSubview(self.messengerView)
         
-        self.chatDataSource = DataSource()
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,7 +58,7 @@ class ChatViewController: BaseChatViewController {
     func createTextInputItem() -> TextChatInputItem {
         let item = TextChatInputItem()
         item.textInputHandler = { [weak self] text in
-            print(text)
+            
         }
         return item
     }
@@ -66,26 +71,13 @@ class ChatViewController: BaseChatViewController {
         return item
     }
     
-    // MARK: PResenter
-    
-    override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
-        
-        let textMessagePresenter = TextMessagePresenterBuilder(viewModelBuilder: ViewModelBuilderProtocol)
-        let photoMessagePresenter = TextMessagePresenterBuilder(viewModelBuilder: ViewModelBuilderProtocol)
-        return [
-            "text-message-type": [textMessagePresenter],
-            "photo-message-type": [photoMessagePresenter],
-        ]
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
+//    func sendText(text: String, isIncomingMessage:Bool) -> GeneralMessengerCell {
+//        
+//    }
+//    
+//    func sendImage(image: UIImage, isIncomingMessage:Bool) -> GeneralMessengerCell {
+//        
+//    }
     
 }
 
