@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ButterChat-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButterChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="ButterChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,37 +22,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oC6-eW-KeN">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Chatrooms" id="1Yh-kA-Qvi">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="eXf-UA-6ND">
-                                            <connections>
-                                                <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="CyX-V6-xm5"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6UW-DR-gvA">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6UW-DR-gvA">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatroom" rowHeight="60" id="fcq-MT-i8z" customClass="ChatroomTableViewCell" customModule="ButterChat" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="chatroom" id="fcq-MT-i8z" customClass="ChatroomTableViewCell" customModule="ButterChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fcq-MT-i8z" id="ytn-5T-y2S">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lemon" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-oi-8U4">
-                                                    <rect key="frame" x="10" y="10" width="39.5" height="39.5"/>
+                                                    <rect key="frame" x="10" y="10" width="73" height="73.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="4lM-oi-8U4" secondAttribute="height" multiplier="1:1" id="w7I-vE-jt0"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chatroom Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBb-Rh-vJ3">
-                                                    <rect key="frame" x="64.5" y="19.5" width="126" height="21"/>
+                                                    <rect key="frame" x="98" y="36.5" width="126" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -81,18 +69,27 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="oC6-eW-KeN" secondAttribute="trailing" id="0mz-x3-ASu"/>
-                            <constraint firstItem="6UW-DR-gvA" firstAttribute="top" secondItem="oC6-eW-KeN" secondAttribute="bottom" id="Ohw-OZ-edX"/>
-                            <constraint firstItem="oC6-eW-KeN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="T4d-vy-csd"/>
                             <constraint firstAttribute="trailing" secondItem="6UW-DR-gvA" secondAttribute="trailing" id="lGg-Ba-jcM"/>
-                            <constraint firstItem="oC6-eW-KeN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ljG-75-Kec"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6UW-DR-gvA" secondAttribute="bottom" id="t9a-zc-y1g"/>
+                            <constraint firstItem="6UW-DR-gvA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vwR-MG-88g"/>
                             <constraint firstItem="6UW-DR-gvA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ymA-9y-RnS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9AS-0g-imL"/>
+                    <navigationItem key="navigationItem" title="ButterChat" id="9AS-0g-imL">
+                        <barButtonItem key="leftBarButtonItem" title="🌎" id="j6Q-jG-ec2">
+                            <connections>
+                                <action selector="langButtonPressed:" destination="BYZ-38-t0r" id="CIz-jF-zYQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="➕" id="MD2-L3-rff">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="Oh2-eP-3Cj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="addButton" destination="eXf-UA-6ND" id="YTJ-57-DRj"/>
+                        <outlet property="addButton" destination="MD2-L3-rff" id="mw8-yg-AsB"/>
+                        <outlet property="langButton" destination="j6Q-jG-ec2" id="Ls3-Uo-QXl"/>
                         <outlet property="tableView" destination="6UW-DR-gvA" id="K61-EZ-urA"/>
                     </connections>
                 </viewController>
@@ -103,7 +100,7 @@
         <!--Chat View Controller-->
         <scene sceneID="0gx-nd-Mlf">
             <objects>
-                <viewController id="E8z-mV-8zI" customClass="ChatViewController" customModule="ButterChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="E8z-mV-8zI" customClass="ChatViewController" customModule="ButterChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ee-5Q-dXo"/>
                         <viewControllerLayoutGuide type="bottom" id="srI-q3-l5l"/>
@@ -118,15 +115,24 @@
                                     <navigationItem title="TITLE" id="rYw-3q-CZd" userLabel="Title"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="some text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJU-g6-Me3">
+                                <rect key="frame" x="149.5" y="323" width="75.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="IJU-g6-Me3" firstAttribute="centerX" secondItem="wE5-do-pT2" secondAttribute="centerX" id="AEK-Ju-bf7"/>
                             <constraint firstItem="ZfJ-M2-QDb" firstAttribute="leading" secondItem="wE5-do-pT2" secondAttribute="leading" id="MLw-1l-5Al"/>
+                            <constraint firstItem="IJU-g6-Me3" firstAttribute="centerY" secondItem="wE5-do-pT2" secondAttribute="centerY" id="Ozf-Wg-eUZ"/>
                             <constraint firstItem="ZfJ-M2-QDb" firstAttribute="top" secondItem="2Ee-5Q-dXo" secondAttribute="bottom" id="eIG-Ux-akf"/>
                             <constraint firstAttribute="trailing" secondItem="ZfJ-M2-QDb" secondAttribute="trailing" id="sVX-ZI-Pdv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="networkLabel" destination="IJU-g6-Me3" id="wIU-mF-glH"/>
                         <outlet property="titleItem" destination="rYw-3q-CZd" id="I26-BE-cih"/>
                     </connections>
                 </viewController>

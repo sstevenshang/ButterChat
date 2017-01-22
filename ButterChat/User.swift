@@ -12,9 +12,9 @@ class User {
     
     var username: String!
     var password: String!
-    var language: String!
+    var language: [String]!
     
-    init(username: String, password: String, language: String) {
+    init(username: String, password: String, language: [String]) {
         self.username = username
         self.password = password
         self.language = language

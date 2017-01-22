@@ -9,12 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Chatto.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ChattoAdditions.xcscheme</key>
+		<key>DropDown.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,11 +42,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0564C2782D1F2F8E464CB332E0FE7246</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>133D0E48A931A73273A94351AB1C2BED</key>
 		<dict>
 			<key>primary</key>
@@ -62,22 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EB01FD994DC50DEA2AFC920AEC1093A</key>
+		<key>442148CBE8CE682804762C07EE7FB202</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5168099F2EBFC99A707C03C9EADE01A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D1D84A2C947F56C03585C88CB253303</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A78E375C69458F502D3B0B1628FFB476</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A94D92F5FC8DB8BC1D7A1AA08B6EED98</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CE160AD9EF644386AE272FDA59614AAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

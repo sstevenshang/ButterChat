@@ -34,7 +34,7 @@ class NetworkHelper {
     
     func openConnection() -> Bool {
         
-        switch client.connect(timeout: 10) {
+        switch client.connect(timeout: 1) {
         case .success:
             print("connection opened")
             return true

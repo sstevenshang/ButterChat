@@ -8,9 +8,7 @@ PODS:
     - AsyncDisplayKit/Core
     - PINCache (= 3.0.1-beta)
     - PINRemoteImage/iOS (= 3.0.0-beta.3)
-  - Chatto (3.0.1)
-  - ChattoAdditions (3.0.1):
-    - Chatto
+  - DropDown (2)
   - NMessenger (1.0.79):
     - AsyncDisplayKit (= 1.9.92)
   - PINCache (3.0.1-beta)
@@ -21,20 +19,18 @@ PODS:
   - SwiftSocket (2.0.1)
 
 DEPENDENCIES:
-  - Chatto (= 3.0.1)
-  - ChattoAdditions (= 3.0.1)
+  - DropDown
   - NMessenger
   - SwiftSocket
 
 SPEC CHECKSUMS:
   AsyncDisplayKit: 49d94f5739669d666ff7cdc3430f43f0b2cfbeaf
-  Chatto: 484273a793e06a33cef2f7e5b5b88a5a375df015
-  ChattoAdditions: efd743b47dbd063eac824cd4bd94756cbf503f70
+  DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
   NMessenger: 79b8a4d2132fe49e03ec8964d07955d6553f831c
   PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
   PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
   SwiftSocket: 2d814afdc97c89217982f86fd036c1874134a63f
 
-PODFILE CHECKSUM: 5b4eae58f2200ef6f567140cafe7fb81c2f170a7
+PODFILE CHECKSUM: 120d749c7560386e23cbfe4f79c5cd5c2b4f3857
 
 COCOAPODS: 1.1.1

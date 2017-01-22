@@ -6,9 +6,9 @@ target 'ButterChat' do
   use_frameworks!
 
   # Pods for ButterChat
-  
-  pod 'Chatto', '= 3.0.1'
-  pod 'ChattoAdditions', '= 3.0.1'
+
   pod 'SwiftSocket'
   pod 'NMessenger'
+  pod 'DropDown'
+
 end

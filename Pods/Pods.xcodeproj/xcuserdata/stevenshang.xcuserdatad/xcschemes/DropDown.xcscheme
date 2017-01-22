@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '442148CBE8CE682804762C07EE7FB202'
-               BlueprintName = 'SwiftSocket'
+               BlueprintIdentifier = '5168099F2EBFC99A707C03C9EADE01A5'
+               BlueprintName = 'DropDown'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftSocket.framework'>
+               BuildableName = 'DropDown.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

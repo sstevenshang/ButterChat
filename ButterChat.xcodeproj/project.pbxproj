@@ -59,6 +59,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B54E1B921E34B0AA00F14F07 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				B5D21A411E32FA75007656C7 /* ViewController.swift */,
+				B55E6ED01E33E24B0053A538 /* ChatroomTableViewCell.swift */,
+				B5E4999F1E33CF9D009C6BBD /* Chatroom.swift */,
+			);
+			name = ChatRoom;
+			sourceTree = "<group>";
+		};
+		B54E1B931E34B28300F14F07 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B5823F261E344FDD0032B10B /* User.swift */,
+				B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */,
+				B55E6ED41E3434210053A538 /* ChatViewController.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
 		B5D21A331E32FA75007656C7 = {
 			isa = PBXGroup;
 			children = (
@@ -80,17 +100,13 @@
 		B5D21A3E1E32FA75007656C7 /* ButterChat */ = {
 			isa = PBXGroup;
 			children = (
+				B54E1B921E34B0AA00F14F07 /* ChatRoom */,
 				B5D21A3F1E32FA75007656C7 /* AppDelegate.swift */,
-				B5D21A411E32FA75007656C7 /* ViewController.swift */,
 				B5D21A431E32FA75007656C7 /* Main.storyboard */,
 				B5D21A461E32FA75007656C7 /* Assets.xcassets */,
 				B5D21A481E32FA75007656C7 /* LaunchScreen.storyboard */,
 				B5D21A4B1E32FA75007656C7 /* Info.plist */,
-				B5CBEFFB1E3310D90077D9B4 /* NetworkHelper.swift */,
-				B5E4999F1E33CF9D009C6BBD /* Chatroom.swift */,
-				B55E6ED01E33E24B0053A538 /* ChatroomTableViewCell.swift */,
-				B55E6ED41E3434210053A538 /* ChatViewController.swift */,
-				B5823F261E344FDD0032B10B /* User.swift */,
+				B54E1B931E34B28300F14F07 /* Chat */,
 			);
 			path = ButterChat;
 			sourceTree = "<group>";

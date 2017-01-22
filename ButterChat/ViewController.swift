@@ -7,10 +7,37 @@
 //
 
 import UIKit
+import DropDown
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var user: User = User(username: "Steven", password: "password", language: ["English","en"])
+    let dropDown = DropDown()
+    
+    var langDict: [String:String] = [
+        "Arabic" : "ar",
+        "Chinese" : "zh-CHS",
+        "English" : "en",
+        "French" : "fr",
+        "German" : "de",
+        "Hindi" : "hi",
+        "Italian" : "it",
+        "Japanese" : "ja",
+        "Korean" : "ko",
+        "Polish" : "pl",
+        "Russian" : "ru",
+        "Spanish" : "es",
+        "Turkish" : "tr"
+    ]
+    
+    @IBOutlet weak var langButton: UIBarButtonItem!
+    
+    @IBAction func langButtonPressed(_ sender: Any) {
+        dropDown.show()
+    }
+    
     
     var chatrooms: [Chatroom] = []
     var lastIconUsed: Int?
@@ -23,7 +50,26 @@ class ViewController: UIViewController {
         if chatrooms.count == 0 {
             tableView.isHidden = true
         }
-        tableView.rowHeight = 70
+        tableView.rowHeight = 60
+        
+        dropDown.anchorView = self.tableView
+        
+        //dropDown.bottomOffset = CGPoint(x: 0, y: 60)
+
+        var langs: [String] = []
+        for (key, _) in langDict {
+            langs.append(key)
+        }
+        dropDown.dataSource = langs
+        
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            
+            guard let langSelected = self.langDict[item] else {
+                print("LANG SETTING GONE WRONG!!")
+                return
+            }
+            self.user.language = [item,langSelected]
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,9 +78,10 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var addButton: UIBarButtonItem!
+    
     @IBAction func addButtonPressed(_ sender: Any) {
-        
-        let alert = UIAlertController(title: "Find Group!", message: "Enter the secret group code.", preferredStyle: .alert)
+    
+        let alert = UIAlertController(title: "Find Chat!", message: "Enter secret chat code.", preferredStyle: .alert)
         
         alert.addTextField { (textField) in
             textField.text = ""
@@ -98,6 +145,7 @@ class ViewController: UIViewController {
             
             let nextScene = segue.destination as? ChatViewController
             nextScene?.title = chatrooms[(tableView.indexPathForSelectedRow?.row)!].name
+            nextScene?.user = user
         }
     }
     
